@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 		echo "Nombre: ".$name."  Apellido: ".$lastname;
 		//aqui estamos creando el array
 
-		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1'),'Direccion de email'=>$this->input->post('direccion de email'),'next'=> $this->input->post('next') );
+		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1'),'Direccion de email'=>$this->input->post('direccion1'),'next'=> $this->input->post('next1') );
 
 //aqui se llama la funcion para guardar en la BD.
 		$this->form_model->guardar($data);
