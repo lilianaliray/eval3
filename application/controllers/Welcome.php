@@ -8,7 +8,7 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('form');
-		//$this->load->model('form_model');  
+		$this->load->model('form_model');  
 	}
 
 	public function index()
@@ -21,6 +21,8 @@ class Welcome extends CI_Controller
 		$lastname=$this->input->post("apellido1");
 		$email=$this->input->post("correo1");
 		echo "nombre1:".$name."apellido1:".$lastname."correo1:".$email;
+		$data=array('nombre'=>$this->input->post('nombre'),'apellido'=>$this->input->post('apellido'),'correo'=> $this->input->post('correo'));
+		$this->form_model->guardar($data);
 	}
 
 
